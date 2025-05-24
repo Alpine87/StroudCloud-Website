@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover">
+    <title>Stroud Cloud</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <!-- Decorative particles background -->
+    <div class="particles" id="particles"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Stroud Cloud</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#">Services</a>
+                    <div class="dropdown-content">
+                        <a href="https://pihole.stroud.cloud/admin" class="dropdown-item">
+                            <img src="assets/Pi-hole_Logo.png" alt="Pi-hole Logo">
+                            <span>Pi-hole</span>
+                        </a>
+                        <a href="http://homeassistant.stroud.cloud" class="dropdown-item">
+                            <img src="assets/Home_Assistant_logo_(2023).svg.png" alt="Home Assistant Logo">
+                            <span class="button-label">Home Assistant</span>
+                        </a>
+                        <a href="https://ssh.stroud.cloud" class="dropdown-item">
+                            <img src="assets/terminal-icon.png" alt="SSH Logo">
+                            <span>SSH Access</span>
+                        </a>
+                        <a href="https://git.stroud.cloud" class="dropdown-item">
+                            <img src="assets/gitea-lg.png" alt="Gitea Logo">
+                            <span>Git Service</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/about">About</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Stroud Cloud</h1>
+            <p>A personal cloud dashboard for managing home network services and self-hosted applications. Access tools with ease and keep everything under control.</p>
+        </section>
+
+        <section class="app-buttons">
+            <a href="https://pihole.stroud.cloud/admin" id="pihole-button" class="app-button">
+                <div class="button-icon">
+                    <img src="assets/Pi-hole_Logo.png" alt="Pi-hole Logo" />
+                </div>
+                <span class="button-label">Pi-hole</span> 
+                <span class="button-label2">DNS Ad blocker</span> 
+            </a>
+
+            <a href="http://homeassistant.stroud.cloud" id="homeassistant-button" class="app-button">
+                <div class="button-icon">
+                    <img src="assets/Home_Assistant_logo_(2023).svg.png" alt="Home Assistant Logo" />
+                </div>
+                <span class="button-label">Home Assistant</span>
+                <span class="button-label2">Smart home automation</span>
+            </a>
+
+            <a href="https://ssh.stroud.cloud" id="ssh-button" class="app-button">
+                <div class="button-icon">
+                    <img src="assets/terminal-icon.png" alt="SSH Logo" />
+                </div>
+                <span class="button-label">SSH Access</span> 
+                <span class="button-label2">Remote CLI</span> 
+            </a>
+
+            <a href="https://git.stroud.cloud" id="gitea-button" class="app-button">
+                <div class="button-icon">
+                    <img src="assets/gitea-lg.png" alt="Gitea Logo" />
+                </div>
+                <span class="button-label">Gitea</span> 
+                <span class="button-label2">Self-Hosted Git Service</span> 
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="cloudflare-protection">
+            <img src="assets/Cloudflare_Logo.png" alt="Cloudflare Logo">
+            <span>Protected by Cloudflare</span>
+        </div>
+        <p>&copy; 2025 Stroud Cloud. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
