@@ -3,3 +3,4 @@ Disallow: /homeassistant/
 Disallow: /pihole/
 Disallow: /ssh/
 Disallow: /git/
+Disallow: /portainer/
