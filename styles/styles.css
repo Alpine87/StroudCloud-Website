@@ -439,8 +439,8 @@ footer p {
 /* Even smaller screens */
 @media screen and (max-width: 480px) {
     .app-buttons {
-        max-width: 280px;
-        gap: 0.8rem;
+        max-width: 480px;
+        gap: 0.5rem;
     }
 
     .button-icon {
