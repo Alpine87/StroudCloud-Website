@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, viewport-fit=cover">
+    <title>Disco Mode - Stroud Cloud</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Decorative particles background -->
+    <div class="particles" id="particles"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Stroud Cloud</div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#">Services</a>
+                    <div class="dropdown-content">
+                        <a href="https://pihole.stroud.cloud/admin" class="dropdown-item">
+                            <img src="../assets/Pi-hole_Logo.png" alt="Pi-hole Logo">
+                            <span>Pi-hole</span>
+                        </a>
+                        <a href="http://homeassistant.stroud.cloud" class="dropdown-item">
+                            <img src="../assets/Home_Assistant_logo_(2023).svg.png" alt="Home Assistant Logo">
+                            <span class="button-label">Home Assistant</span>
+                        </a>
+                        <a href="https://ssh.stroud.cloud" class="dropdown-item">
+                            <img src="../assets/terminal-icon.png" alt="SSH Logo">
+                            <span>SSH Access</span>
+                        </a>
+                        <a href="https://git.stroud.cloud" class="dropdown-item">
+                            <img src="../assets/gitea-lg.png" alt="Gitea Logo">
+                            <span>Git Service</span>
+                        </a>
+                        <a href="https://portainer.stroud.cloud" class="dropdown-item">
+                            <img src="../assets/portainer.png" alt="Portainer Logo">
+                            <span>Container Management</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Engage Disco Mode</h1>
+        </section>
+
+        <section class="disco-control">
+    <div id="disco-button" class="disco-button">
+        <svg class="disco-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.56,5.44L15.11,6.89C16.84,7.94 18,9.83 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12C6,9.83 7.16,7.94 8.88,6.88L7.44,5.44C5.36,6.88 4,9.28 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12C20,9.28 18.64,6.88 16.56,5.44M13,3H11V13H13"/>
+        </svg>
+    </div>
+    <div class="disco-status" id="disco-status">Click to Start the Disco</div>
+</section>
+
+<!-- Feedback messages -->
+<div id="feedback-success" class="feedback success">Disco Mode Engaged!</div>
+<div id="feedback-error" class="feedback error">Failed to engage Disco Mode. Please try again.</div>
+
+    </main>
+
+    <footer>
+        <div class="cloudflare-protection">
+            <img src="../assets/Cloudflare_Logo.png" alt="Cloudflare Logo">
+            <span>Protected by Cloudflare</span>
+        </div>
+        <p>&copy; 2025 Stroud Cloud. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/scripts.js"></script>
+</body>
+</html>

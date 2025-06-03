@@ -40,3 +40,110 @@ function updateLayout() {
 window.addEventListener('load', updateLayout);
 window.addEventListener('resize', updateLayout);
 window.addEventListener('orientationchange', updateLayout);
+
+// Toggle Lamp from QR Code Page
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lampButton = document.getElementById("lamp-button");
+    const lampStatus = document.getElementById("lamp-status");
+    const feedbackSuccess = document.getElementById("feedback-success");
+    const feedbackError = document.getElementById("feedback-error");
+
+    if (lampButton) {
+        lampButton.addEventListener("click", function () {
+            toggleLamp();
+        });
+    }
+
+    function toggleLamp() {
+        // Add visual feedback during request
+        lampButton.classList.add("pulse");
+        lampStatus.textContent = "Sending request...";
+
+        // Send POST request to webhook
+        fetch("https://webhook.stroud.cloud/api/webhook/lamp", {
+            method: "POST"
+        })
+        .then(response => {
+            if (response.ok) {
+                lampButton.classList.remove("pulse");
+                lampStatus.textContent = "Lamp toggled successfully!";
+                showFeedback(feedbackSuccess);
+            } else {
+                throw new Error("Request failed");
+            }
+        })
+        .catch(() => {
+            lampButton.classList.remove("pulse");
+            lampStatus.textContent = "Failed to toggle lamp.";
+            showFeedback(feedbackError);
+        });
+    }
+
+    function showFeedback(element) {
+        element.style.display = "block";
+        element.style.opacity = "1";
+
+        setTimeout(() => {
+            element.style.opacity = "0";
+            setTimeout(() => {
+                element.style.display = "none";
+            }, 500);
+        }, 2000);
+    }
+});
+
+// Disco Mode from QR Code Page 2
+
+document.addEventListener("DOMContentLoaded", function () {
+    const discoButton = document.getElementById("disco-button");
+    const discoStatus = document.getElementById("disco-status");
+    const feedbackSuccess = document.getElementById("feedback-success");
+    const feedbackError = document.getElementById("feedback-error");
+
+    if (discoButton) {
+        discoButton.addEventListener("click", function () {
+            toggleDisco();
+        });
+    }
+
+    function toggleDisco() {
+        // Add visual feedback during request
+        discoButton.classList.add("pulse");
+        discoStatus.textContent = "Sending request...";
+
+        // Send POST request to webhook
+        fetch("https://webhook.stroud.cloud/api/webhook/disco", {
+            method: "POST"
+        })
+        .then(response => {
+            if (response.ok) {
+                discoButton.classList.remove("pulse");
+                discoStatus.textContent = "Disco Mode engaged!";
+                showFeedback(feedbackSuccess);
+            } else {
+                throw new Error("Request failed");
+            }
+        })
+        .catch(() => {
+            discoButton.classList.remove("pulse");
+            discoStatus.textContent = "Failed to engage Disco Mode.";
+            showFeedback(feedbackError);
+        });
+    }
+
+    function showFeedback(element) {
+        element.style.display = "block";
+        element.style.opacity = "1";
+
+        setTimeout(() => {
+            element.style.opacity = "0";
+            setTimeout(() => {
+                element.style.display = "none";
+            }, 500);
+        }, 2000);
+    }
+});
+
+
+
