@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => {
             if (response.ok) {
                 lampButton.classList.remove("pulse");
-                lampStatus.textContent = "Lamp toggled successfully!";
+                lampStatus.textContent = "Disco mode engaged successfully!";
                 showFeedback(feedbackSuccess);
                 createConfetti();
             } else {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(() => {
             lampButton.classList.remove("pulse");
-            lampStatus.textContent = "Failed to toggle lamp.";
+            lampStatus.textContent = "Request failed.";
             showFeedback(feedbackError);
         });
     }
